@@ -3,7 +3,7 @@ package week2.task2;
 public final class Fraction {
     private int numerator;
     private int denominator;
-
+    
     // setNumerator
     void setNumerator( int n ) {
         this.numerator = n;
@@ -13,11 +13,11 @@ public final class Fraction {
         this.denominator = d;
     }
     // getNumerator
-    int getNumerator() {
+    public int getNumerator() {
         return numerator;
     }
     // getDenominator
-    int getDenominator() {
+    public int getDenominator() {
         return denominator;
     }
     // TODO: khai báo các thuộc tính
@@ -34,13 +34,13 @@ public final class Fraction {
         
         int a = this.getDenominator(); // lấy giá trị của mẫu this
         
-        this.setNumerator( this.getNumerator()* other.getDenominator()); //tử this nhân mẫu other
+        int n = this.getNumerator()* other.getDenominator(); //tử this nhân mẫu other
         
-        this.setDenominator(a*other.getDenominator()); //mẫu số chung
+        int d = a*other.getDenominator(); //mẫu số chung
         
-        add.setNumerator(this.getNumerator() + a*other.getNumerator()); //cộng tử vs tử
+        add.setNumerator(n + a*other.getNumerator()); //cộng tử vs tử
         
-        add.setDenominator(this.getDenominator());    //mẫu số chung 
+        add.setDenominator(d);    //mẫu số chung 
         
         return add;
     }
@@ -51,13 +51,13 @@ public final class Fraction {
         
         int a = this.getDenominator(); // lấy giá trị của mẫu this
         
-        this.setNumerator( this.getNumerator()* other.getDenominator()); //tử this nhân mẫu other
+        int n = this.getNumerator()* other.getDenominator(); //tử this nhân mẫu other
         
-        this.setDenominator(a* other.getDenominator()); //mẫu số chung
+        int d = a* other.getDenominator(); //mẫu số chung
         
-        sub.setNumerator(this.getNumerator() - a*other.getNumerator()); //trừ tử vs tử
+        sub.setNumerator(n - a*other.getNumerator()); //trừ tử vs tử
         
-        sub.setDenominator(this.getDenominator());    //mẫu số chung
+        sub.setDenominator(d);    //mẫu số chung
         
         return sub;
     }
