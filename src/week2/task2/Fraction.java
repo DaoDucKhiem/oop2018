@@ -89,7 +89,7 @@ public final class Fraction {
     public boolean equals( Object other ) {
         Fraction ab = (Fraction)other;
         boolean check = false;
-        if( this.getNumerator() == ab.getNumerator() && this.getDenominator() == ab.getDenominator() ) check = true; 
+        if( (this.getNumerator() * ab.getDenominator()) == (this.getDenominator() * ab.getNumerator()) ) check = true; 
         return check;
     }
 }
