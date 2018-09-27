@@ -86,9 +86,10 @@ public final class Fraction {
     }
     
     //kiểm tra hai phân số bằng nhau
-    public boolean equals( Fraction other ) {
+    public boolean equals( Object other ) {
+        Fraction ab = (Fraction)other;
         boolean check = false;
-        if( this.getNumerator() == other.getNumerator() && this.getDenominator() == other.getDenominator() ) check = true; 
+        if( this.getNumerator() == ab.getNumerator() && this.getDenominator() == ab.getDenominator() ) check = true; 
         return check;
     }
 }
