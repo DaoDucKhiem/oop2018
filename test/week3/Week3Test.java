@@ -1,40 +1,71 @@
 package week3;
 
+import static org.junit.Assert.*;
+import org.junit.Test;
 public class Week3Test {
 
-    public static void main(String[] args) {
-  
-    // TODO: Viết 5 testcase cho phương thức max()
-        System.out.printf("max cua 3 va 5 la: %d\n",Week3.max(3,5));
-        System.out.printf("max cua 9 va 5 la: %d\n",Week3.max(9,5));
-        System.out.printf("max cua 1 va 6 la: %d\n",Week3.max(1,6));
-        System.out.printf("max cua 2 va 15 la: %d\n",Week3.max(2,15));
-        System.out.printf("max cua 100 va 1000 la: %d\n",Week3.max(100,1000));
-        
-    // TODO: Viết 5 testcase cho phương thức minOfArray()
-        int [] arr1;
-        arr1 = new int [] {2, 55, 34, 87, 11};
-        int [] arr2;
-        arr2 = new int [] {34, 4, 50, 93, 20};
-        int [] arr3;
-        arr3 = new int [] {23, 44, 52, 9, 35};
-        int [] arr4;
-        arr4 = new int [] {36, 12, 5, 33, 21};
-        int [] arr5;
-        arr5 = new int [] {54, 55, 26, 7, 33};
-        
-        System.out.printf("min array1 la: %d\n", Week3.minOfArray(arr1));
-        System.out.printf("min array2 la: %d\n", Week3.minOfArray(arr2));
-        System.out.printf("min array3 la: %d\n", Week3.minOfArray(arr3));
-        System.out.printf("min array4 la: %d\n", Week3.minOfArray(arr4));
-        System.out.printf("min array5 la: %d\n", Week3.minOfArray(arr5));
+    /*public static void main(String[] args) {
 
-    // TODO: Viết 5 testcase cho phương thức calculateBMI()
-    
-        System.out.println("chieu cao    can nang    BMI");
-        System.out.println("167          56          "+Week3.calculateBMI(56, 167));
-        System.out.println("150          43          "+Week3.calculateBMI(43, 150));
-        System.out.println("170          80          "+Week3.calculateBMI(80, 170));
-        System.out.println("180          75          "+Week3.calculateBMI(75, 180));
+        // TODO: Viết 5 testcase cho phương thức max()
+        assertEquals(9, Week3.max(6, 9));
+        assertEquals(3, Week3.max(3, 2));
+        assertEquals(35, Week3.max(35, 21));
+        assertEquals(11, Week3.max(6, 11));
+        assertEquals(8, Week3.max(4, 8));
+        
+        // TODO: Viết 5 testcase cho phương thức minOfArray()
+        // TODO: Viết 5 testcase cho phương thức calculateBMI() 
+    }
+        */
+    /**
+     * Test of max method, of class Week3.
+     */
+    @Test
+    public void testMax() {
+        // TODO: Viết 5 testcase cho phương thức max()
+        assertEquals(9, Week3.max(6, 9));
+        assertEquals(3, Week3.max(3, 2));
+        assertEquals(35, Week3.max(35, 21));
+        assertEquals(11, Week3.max(6, 11));
+        assertEquals(8, Week3.max(4, 8));
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of minOfArray method, of class Week3.
+     */
+    @Test
+    public void testMinOfArray() {
+        
+        // TODO: Viết 5 testcase cho phương thức minOfArray()
+        int[] array = {5, 6, 2, 7, 3};
+        assertEquals(2, Week3.minOfArray(array));
+        int[] array1 = {6, 13, 24, 3, 64};
+        assertEquals(3, Week3.minOfArray(array1));
+        int[] array2 = {51, 62, 24, 73, 31};
+        assertEquals(24, Week3.minOfArray(array2));
+        int[] array3 = {61, 13, 242, 37, 55};
+        assertEquals(13, Week3.minOfArray(array3));
+        int[] array4 = {87, 66, 23, 71, 38};
+        assertEquals(23, Week3.minOfArray(array4));
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of calculateBMI method, of class Week3.
+     */
+    @Test
+    public void testCalculateBMI() {
+        // TODO: Viết 5 testcase cho phương thức calculateBMI() 
+        assertEquals("Thieu can", Week3.calculateBMI(48, 1.68));
+        assertEquals("Binh thuong", Week3.calculateBMI(59, 1.65));
+        assertEquals("Thua can", Week3.calculateBMI(63, 1.6));
+        assertEquals("Beo phi", Week3.calculateBMI(75, 1.62));
+        assertEquals("Binh thuong", Week3.calculateBMI(60, 1.8));
+        
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
 }
