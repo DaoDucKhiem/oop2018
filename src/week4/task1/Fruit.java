@@ -1,6 +1,6 @@
 package week4.task1;
 
-class Fruit {
+public class Fruit {
 	Double price; // giá bán
 	Double quantily; // số lượng
 	String date; // ngày nhập
