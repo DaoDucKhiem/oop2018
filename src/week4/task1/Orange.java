@@ -1,6 +1,6 @@
 package week4.task1;
 
-class Orange extends Fruit {
+public class Orange extends Fruit {
 	String smell; // hương vị
 	String color; // màu sắc
 
