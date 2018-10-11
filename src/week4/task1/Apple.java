@@ -1,5 +1,5 @@
 package week4.task1;
-class Apple extends Fruit {
+public class Apple extends Fruit {
 	String crispness; // độ giòn
         String dongot;
 
